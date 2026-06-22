@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Accessibility Service configuration for Unloop.
+
+  Scope is intentionally minimal to satisfy Google Play's Accessibility
+  Service policy: we only inspect window state / content-change events
+  from the short-form video packages declared in the <queries> allowlist,
+  and we never capture text the user types.
+-->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/accessibility_service_description"
+    android:accessibilityEventTypes="typeWindowStateChanged|typeWindowContentChanged"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagDefault|flagIncludeNotImportantViews"
+    android:canRetrieveWindowContent="true"
+    android:notificationTimeout="200"
+    android:packageNames="com.instagram.android,com.zhiliaoapp.musically,com.ss.android.ugc.trill,com.google.android.youtube,com.facebook.katana,com.snapchat.android,com.reddit.frontpage" />

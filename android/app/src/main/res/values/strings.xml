@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Unloop</string>
+    <string name="title_activity_main">Unloop</string>
+    <string name="package_name">app.unloop</string>
+    <string name="custom_url_scheme">app.unloop</string>
+
+    <!-- Accessibility Service disclosure (shown in system Settings list) -->
+    <string name="accessibility_service_label">Unloop reel detection</string>
+    <string name="accessibility_service_description">Unloop uses the Accessibility Service only to detect when you open short-form video feeds (Reels, Shorts, TikTok) so it can count them and help you reduce scrolling. Unloop never reads the text you type, never captures passwords or messages, and never sends screen contents to any server. Data stays on your device unless you explicitly enable Cloud Sync.</string>
+
+    <!-- Permission disclosure copy reused by the in-app AccessibilityDisclosure screen -->
+    <string name="permission_disclosure_title">Why Unloop needs these permissions</string>
+    <string name="permission_disclosure_notifications">Notifications: to deliver the daily reminders and streak alerts you schedule in Settings.</string>
+    <string name="permission_disclosure_usage_access">Usage Access: to measure how long supported apps stay in the foreground, so weekly stats are accurate.</string>
+    <string name="permission_disclosure_accessibility">Accessibility: to recognise when a short-form video feed appears and count reels. No keystrokes or message text are ever read.</string>
+</resources>
