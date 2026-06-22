@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
     <!-- ============================================================ -->
     <!-- Permissions                                                  -->
     <!-- ============================================================ -->
@@ -23,9 +21,7 @@
 
     <!-- Usage Access (declared via signature|privileged; users grant via Settings).
          Listed so the Settings deep-link surfaces and Data Safety reflects the claim. -->
-    <uses-permission
-        android:name="android.permission.PACKAGE_USAGE_STATS"
-        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" tools:ignore="ProtectedPermissions" />
 
     <!-- Vibrate for notification feedback -->
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -40,8 +36,10 @@
     <!-- ============================================================ -->
     <queries>
         <package android:name="com.instagram.android" />
-        <package android:name="com.zhiliaoapp.musically" /> <!-- TikTok global -->
-        <package android:name="com.ss.android.ugc.trill" /> <!-- TikTok SEA -->
+        <package android:name="com.zhiliaoapp.musically" />
+        <!-- TikTok global -->
+        <package android:name="com.ss.android.ugc.trill" />
+        <!-- TikTok SEA -->
         <package android:name="com.google.android.youtube" />
         <package android:name="com.facebook.katana" />
         <package android:name="com.snapchat.android" />
@@ -59,14 +57,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="33">
-
         <!-- Crashlytics: collection is toggled at runtime in UnloopApplication
              (disabled in debug, enabled in release). NDK crash capture is
              enabled by the crashlytics-ndk artifact. -->
-        <meta-data
-            android:name="firebase_crashlytics_collection_enabled"
-            android:value="false" />
-
+        <meta-data android:name="firebase_crashlytics_collection_enabled" android:value="false" />
 
         <activity
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode|navigation|density"
@@ -75,12 +69,10 @@
             android:theme="@style/AppTheme.NoActionBarLaunch"
             android:launchMode="singleTask"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <!-- ============================================================ -->
@@ -99,14 +91,12 @@
             </intent-filter>
             <meta-data
                 android:name="android.accessibilityservice"
-                android:resource="@xml/accessibility_service_config" />
+                android:resource="@xml/accessibility_service_config"
+            />
         </service>
 
         <!-- Reschedule reminders after device reboot -->
-        <receiver
-            android:name=".reminders.BootCompletedReceiver"
-            android:exported="true"
-            android:enabled="true">
+        <receiver android:name=".reminders.BootCompletedReceiver" android:exported="true" android:enabled="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
@@ -118,9 +108,7 @@
             android:authorities="${applicationId}.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"></meta-data>
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths" />
         </provider>
     </application>
 </manifest>

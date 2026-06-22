@@ -18,11 +18,11 @@ const config: CapacitorConfig = {
   appId: "app.unloop",
   appName: "Unloop",
   webDir: "dist/client",
-  android: {
-    allowMixedContent: false,
-  },
+
   server: {
+    url: "https://unloop-reclaim-your-focus.vercel.app/app",
     androidScheme: "https",
+    cleartext: true,
   },
 };
 
